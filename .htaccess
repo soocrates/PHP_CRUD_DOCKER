@@ -1,0 +1,11 @@
+# Redirect all traffic from project/ to project/app/
+RewriteEngine On
+RewriteBase /
+RewriteRule ^$ app/ [L]
+RewriteRule (.*) app/$1 [L]
+
+# Deny access to .env file
+<Files .env>
+    Order allow,deny
+    Deny from all
+</Files>
