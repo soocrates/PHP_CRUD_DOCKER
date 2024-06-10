@@ -1,4 +1,12 @@
 <?php
+require __DIR__ . '/vendor/autoload.php';
+
+use Dotenv\Dotenv;
+
+// Load environment variables from .env file
+$dotenv = Dotenv::createImmutable(__DIR__);
+$dotenv->load();
+
 /* Database credentials from environment variables */
 define('DB_SERVER', getenv('DB_SERVER'));
 define('DB_USERNAME', getenv('DB_USERNAME'));
