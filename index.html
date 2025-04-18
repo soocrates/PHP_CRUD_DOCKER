@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Folder Navigation</title>
+    <!-- Bootstrap CSS from CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css">
+    <!-- Adding animate.css library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <style>
+        body {
+            background-image: url('https://images.unsplash.com/photo-1555066931-4365d14bab8c');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .button-container {
+            background-color: rgba(37, 26, 77, 0.664);
+            padding: 2rem;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+        }
+        
+        .button-container:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+        
+        .btn {
+            margin: 0.5rem;
+            padding: 0.75rem 2rem;
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+        }
+        
+        .btn:hover {
+            transform: scale(1.1);
+        }
+        
+        /* Animation for the button container */
+        @keyframes float {
+            0% {
+                transform: translateY(0px);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+            100% {
+                transform: translateY(0px);
+            }
+        }
+        
+        .animated-container {
+            animation: float 3s ease-in-out infinite;
+        }
+        
+        /* Animation for the buttons */
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+        
+        .animated-button {
+            animation: pulse 2s infinite;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-8 button-container animate__animated animate__fadeIn animated-container">
+                <h2 class="mb-4 animate__animated animate__fadeInDown text-info">Go To</h2>
+                <div>
+                    <a href="info/index.php" class="btn btn-outline-primary btn-sm animate__animated animate__fadeInLeft animated-button">PHP Info</a>
+                    <a href="info/serverinfo.php" class="btn btn-outline-warning animate__animated animate__fadeInRight animated-button">Server Info</a>
+                    <a href="app/" class="btn btn-outline-success animate__animated animate__fadeInRight animated-button">PHP APP</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS from CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
