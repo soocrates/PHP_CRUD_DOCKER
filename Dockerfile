@@ -26,7 +26,7 @@ RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local
 RUN composer --version
 
 # Install PHP dependencies
-RUN composer install --no-dev --no-interaction --prefer-dist
+RUN composer install --no-interaction --prefer-dist
 
 # 1778  docker build -t php-app .
 # 1779  docker run -p 8080:80 --name php-container php-app
